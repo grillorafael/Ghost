@@ -20,11 +20,11 @@ prev_section: upgrading
 
             <dl>
                 <dt id="export-path">'/usr/local/bin' não parece estar no meu $PATH</dt>
-                <dd>Você pode adiciona-lo realizando os passos a seguir:
+                <dd>Você pode adicioná-lo realizando os passos a seguir:
                     <ul>
                         <li>Numa janela do seu terminal digite <code>cd ~</code>, isso irá o levar para seu diretório home</li>
                         <li>Agora digite <code>ls -al</code> para mostrar todos os arquivos e pastas, incluindo os invisíveis</li>
-                        <li>Você deve ver um arquivo chamado <code class="path">.profile</code> ou <code class="path">.bash_profile</code> caso nenhum exista, digite <code>touch .bash_profile</code> para cria-lo</li>
+                        <li>Você deve ver um arquivo chamado <code class="path">.profile</code> ou <code class="path">.bash_profile</code>. Caso nenhum exista, digite <code>touch .bash_profile</code> para criá-lo</li>
                         <li>A seguir, digite <code>open -a Textedit .bash_profile</code> para abri-lo utilizando o Textedit.</li>
                         <li>Adicione <code>export PATH=$PATH:/usr/local/bin/</code> ao fim do arquivo, e salve-o.</li>
                         <li>Essa nova configuração irá ser carregada assim que um novo terminal iniciar, então inicie uma nova aba ou janela do terminal e digite <code>echo $PATH</code> para ver que '/usr/local/bin/' está agora presente.</li>
@@ -40,7 +40,7 @@ prev_section: upgrading
                 </dd>
                 <dt id="image-uploads">Eu não consigo enviar minhas imagens</dt>
                 <dd>
-                    <p>Se você está em uma instalação no DigitalOcean Droplet que foi configurado quando o Ghost estava na v0.3.2, ou você está usando o nginx em alguma outra plataforma, você pode ter problemas ao enviar suas imagens.</p>
+                    <p>Se você está em uma instalação em um droplet da DigitalOcean que foi configurado quando o Ghost estava na v0.3.2, ou você está usando o nginx em alguma outra plataforma, você pode ter problemas ao enviar suas imagens.</p>
                     <p>O que está acontecendo provavelmente, é que você não consegue enviar imagens maiores que 1MB (tente uma imagem menor, isso deve funcionar). Esse é um limite muito pequeno!</p>
                     <p>Para aumentar esse limite você precisa editar o arquivo de configuração do nginx, e alterar o limite para outro qualquer.</p>
                     <ul>
