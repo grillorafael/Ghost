@@ -25,11 +25,11 @@ next_section: upgrading
 
             <h3>Instaladores</h3>
 
-            <p>Existem alguns opções de instaladores simples no momento:
+            <p>Existem algumas opções de instaladores simples no momento:
                 <ul>
                     <li>Publicar na nuvem com <a href="http://wiki.bitnami.com/Applications/BitNami_Ghost">Bitnami</a>.</li>
                     <li>Lançar o Ghost com <a href="http://developer.rackspace.com/blog/launch-ghost-with-rackspace-deployments.html">Rackspace deployments</a>.</li>
-                    <li>Colocar no ar e rodando usando um <a href="https://www.digitalocean.com/community/articles/how-to-use-the-digitalocean-ghost-application">DigitalOcean Droplet</a>.</li>
+                    <li>Colocar no ar usando um <a href="https://www.digitalocean.com/community/articles/how-to-use-the-digitalocean-ghost-application">droplet da DigitalOcean</a>.</li>
                 </ul>
             </p>
 
@@ -40,7 +40,7 @@ next_section: upgrading
 
             <p>O que não irá funcionar no momento é uma hospedagem compartilhada (como aquelas que usam o cPanel), esse tipo de hospedagem normalmente é destinado a aplicativos que rodam algo como o PHP. Alguns já oferecem suporte ao Ruby, e talvez um dia irão oferecer suporte ao Node.js ou algo similar.
 
-            <p>Infelizmente alguns servidores cloud específicos para utilizar o Node.js como o <strong>Nodejitsu</strong> & <strong>Heroku</strong> <strong>NÃO</strong> são compatíveis com o Ghost. Eles irão funcionar no início, mas irão deletar seus arquivos, imagens e seu banco de dados irá desaparecer. O Heroku suporta MySQL e você pode usa-lo, porém você ainda assim irá perder suas imagens enviadas.</p>
+            <p>Infelizmente alguns servidores cloud específicos para utilizar o Node.js como o <strong>Nodejitsu</strong> & <strong>Heroku</strong> <strong>NÃO</strong> são compatíveis com o Ghost. Eles irão funcionar no início, mas irão deletar seus arquivos, imagens e seu banco de dados irá desaparecer. O Heroku suporta MySQL e você pode usá-lo, porém você ainda assim irá perder suas imagens enviadas.</p>
 
             <p>Os links a seguir contém instruções de como configurar e rodar com:
                 <ul>
@@ -57,7 +57,7 @@ next_section: upgrading
             <p>O método anterior descrito para iniciar o Ghost é usando o comando <code>npm start</code>. Essa é uma boa maneira para um ambiente local de desenvolvimento, mas se você usar a linha de comando para iniciar o Ghost, ele irá parar sempre que você fechar a janela do terminal ou sair do SSH. Para evitar que o Ghost pare, você tem que rodar ele como um serviço. Existem duas maneiras de fazer isso.</p>
 
             <h3>Forever (<a href="https://npmjs.org/package/forever">https://npmjs.org/package/forever</a>)</h3>
-            <p>Você pode usar o <code>forever</code> para rodar o Ghost como uma tarefa em plano de fundo. O <code>forever</code> irá tomar conta para que sua instalação fique sempre no ar, reiniciando-a caso ele dê algum erro.</p>
+            <p>Você pode usar o <code>forever</code> para rodar o Ghost como uma tarefa em segundo plano. O <code>forever</code> irá tomar conta para que sua instalação fique sempre no ar, reiniciando-a caso ele dê algum erro.</p>
 
             <ul>
                 <li>
@@ -75,10 +75,10 @@ next_section: upgrading
             </ul>
 
             <h3>Supervisor (<a href="http://supervisord.org/">http://supervisord.org/</a>)</h3>
-            <p>Distribuições Linux populares com o Fedora, Debian, and Ubuntu&mdash;possuem um pacote do Supervisor: Um sistema de controle de processos que o permite de rodar o Ghost ao iniciar a máquina, sem utilizar scripts do tipo <em>init</em>. Diferente de um script do tipo <em>init</em>, o Supervisor é compatível com várias distribuições linux e suas versões.</p>
+            <p>Distribuições Linux populares &mdash; como o Fedora, Debian, e Ubuntu &mdash; possuem o pacote Supervisor: Um sistema de controle de processos que o permite de rodar o Ghost ao iniciar a máquina, sem utilizar scripts do tipo <em>init</em>. Diferente de um script do tipo <em>init</em>, o Supervisor é compatível com várias distribuições linux e suas versões.</p>
             <ul>
                 <li>
-                    <a href="http://supervisord.org/installing.html">Instale o Supervisor</a> como requerimento em sua distribuição Linux. Normalmente você irá usar esses comandos:
+                    <a href="http://supervisord.org/installing.html">Instale o Supervisor</a> em sua distribuição Linux. Normalmente você irá usar esses comandos:
                     <ul>
                         <li>
                             Debian/Ubuntu: <code>apt-get install supervisor</code>
@@ -313,15 +313,15 @@ esac
                     </ul>
                 </li>
                 <li>
-                    Para iniciar o Ghost junto com o sistema utilizando o script <em>init</em> que acabamos de criar, você precisa registra-lo no sistema. Para isso, utilize os seguintes comandos no terminal: <code>update-rc.d ghost defaults</code> e <code>update-rc.d ghost enable</code>
+                    Para iniciar o Ghost junto com o sistema utilizando o script <em>init</em> que acabamos de criar, você precisa registrá-lo no sistema. Para isso, utilize os seguintes comandos no terminal: <code>update-rc.d ghost defaults</code> e <code>update-rc.d ghost enable</code>
                 </li>
             </ul>
 
-            <p>Documentação sobre usar o <em>node forever</em> e como usar o Ghost como <em>daemon</em> no Ubuntu em breve!</p>
+            <p>Documentação sobre como usar o <em>node forever</em> e como usar o Ghost como <em>daemon</em> no Ubuntu em breve!</p>
 
             <h2>Configurando o Ghost com seu domínio</h2>
 
-            <p>Documentação utilizando nginx como proxy reverso a caminho.</p>
+            <p>Documentação utilizando nginx como proxy reverso à caminho.</p>
 
             {% if page.next_section || page.prev_section %}
                 {% include pagination.html %}
