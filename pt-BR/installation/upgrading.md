@@ -24,11 +24,11 @@ next_section: troubleshooting
 
             <p class="note"><strong>Faça Backup!</strong> Sempre faça um backup antes de atualizar. Leia as <a href="#backing-up">instruções de backup</a> antes!</p>
 
-            <h2>Overview</h2>
+            <h2>Visão geral</h2>
 
             <img src="https://s3-eu-west-1.amazonaws.com/ghost-website-cdn/folder-structure.png" style="float:left" />
 
-            <p>Ghost, uma vez que instalado, tem uma estrutura de pastas semelhantes à mostrada ao lado. Existem dois diretórios principais, <code class="path">content</code> e <code class="path">core</code>, e mais uns arquivos no diretório raiz.</p>
+            <p>O Ghost, uma vez que instalado, tem uma estrutura de pastas semelhantes à mostrada ao lado. Existem dois diretórios principais, <code class="path">content</code> e <code class="path">core</code>, e mais uns arquivos no diretório raiz.</p>
 
             <p>Atualizar o Ghost é uma questão de substituir os arquivos antigos pelos novos, rodar novamente o <code>npm install</code> para atualizar a pasta <code class="path">node_modules</code> e reiniciar o Ghost para fazer as mudanças terem efeito.</p>
 
@@ -40,7 +40,7 @@ next_section: troubleshooting
             <img src="https://s3-eu-west-1.amazonaws.com/ghost-website-cdn/export.png" style="float:right" />
 
             <ul>
-                <li>Para salvar toda a informação do seu banco de dados, entre na sua instalação do Ghost e vá para <code class="path">/ghost/debug/</code>. Aperte o botão exportar e faça download do arquivo JSON contendo toda a sua informação. Feito</li>
+                <li>Para salvar toda a informação do seu banco de dados, entre na sua instalação do Ghost e vá para <code class="path">/ghost/debug/</code>. Aperte o botão exportar e faça download do arquivo JSON contendo toda a sua informação. Pronto.</li>
                 <li>Para salvar os temas personalizados e imagens, você precisa copiar os arquivos dentro da pasta <code class="path">content/themes</code> e <code class="path">content/images</code></li>
             </ul>
             <p class="note"><strong>Nota:</strong> Você pode, se quiser, fazer uma cópia do banco de dados em <code class="path">content/data</code> mas <strong>fique avisado</strong> que você não deve fazer isso se o Ghost estiver rodando. Por favor pare ele antes.</p>
@@ -74,7 +74,7 @@ next_section: troubleshooting
 
             <p>Os passos no tutorial em vídeo
                 <ul>
-                    <li><code class="path">cd ~/Downloads</code> - muda o diretório para o Downloads, aonde a última versão do Ghost foi salva.<li>
+                    <li><code class="path">cd ~/Downloads</code> - muda o diretório para o Downloads, onde a última versão do Ghost foi salva.<li>
                     <li><code>unzip ghost-0.3.1.zip -d ghost-0.3.3</code> - Extrai o Ghost na pasta <code class="path">ghost-0.3.3</code></li>
                     <li><code class="path">cd ghost-0.3.3</code> - muda a pasta para <code class="path">ghost-0.3.3</code></li>
                     <li><code>ls</code> - Mostra todos os arquivo dentro desse diretório</li>
@@ -91,7 +91,7 @@ next_section: troubleshooting
 
             <ul>
                 <li>Primeiro você precisa descobrir a URL da última versão do Ghost. Ela deve ser algo como <code>http://ghost.org/zip/ghost-latest.zip</code>.</li>
-                <li>Baixe o arquivo zip com o comando <code>wget http://ghost.org/zip/ghost-latest.zip</code> (ou qualquer que seja a URL da última versão do Ghost).</li>
+                <li>Baixe o arquivo .zip com o comando <code>wget http://ghost.org/zip/ghost-latest.zip</code> (ou qualquer que seja a URL da última versão do Ghost).</li>
                 <li>Extraia o arquivo com <code>unzip -uo ghost-0.3.*.zip -d path-to-your-ghost-install</code></li>
                 <li>Rode <code>npm install --production</code> para baixar as novas dependências</li>
                 <li>Finalmente, reinicie o Ghost para que as mudanças façam efeito</li>
@@ -99,13 +99,13 @@ next_section: troubleshooting
 
             <p><strong>Adicionalmente</strong>, <a href="http://www.howtoinstallghost.com/how-to-update-ghost/">howtoinstallghost.com</a> também tem instruções para atualizar o Ghost em servidores linux.</p>
 
-            <h3 id="digitalocean">Como atualizar um Droplet DigitalOcean</h3>
+            <h3 id="digitalocean">Como atualizar um Droplet da DigitalOcean</h3>
 
             <p class="note"><strong>Faça Backup!</strong> Sempre faça um backup antes de atualizar. Leia as <a href="#backing-up">instruções de backup</a> antes!</p>
 
             <ul>
             <li>Primeiro você precisa descobrir a URL da última versão do Ghost. Ela deve ser algo como <code>http://ghost.org/zip/ghost-latest.zip</code>.</li>
-            <li>Uma vez que você conseguir a URL da última versão, no console do seu Droplet digite <code>cd /var/www/</code> para mudar para o diretório aonde o código do Ghost vive.</li>
+            <li>Uma vez que você conseguir a URL da última versão, no console do seu Droplet digite <code>cd /var/www/</code> para mudar para o diretório onde o código do Ghost vive.</li>
             <li>Depois, digite <code>wget http://ghost.org/zip/ghost-latest.zip</code> (ou qualquer que seja a URL da última versão do Ghost).</li>
             <li>Extraia o arquivo com o comando <code>unzip -uo ghost-0.3.*.zip -d ghost</code></li>
             <li>Tenha certeza que todos os arquivos estejam com as permissões corretas digitando <code>chown -R ghost:ghost ghost/*</code></li>
@@ -117,7 +117,7 @@ next_section: troubleshooting
             <h2 id="upgrading-node">Como atualizar o Node.js para a última versão</h2>
 
             <p>Se você originalmente instalou o Node.js pelo site do <a href="nodejs.org">Node.js</a>, você pode atualizar o Node.js para a última versão baixando e rodando o último instalador. Isso irá substituir a versão instalada pela nova versão.</p>
-            <p>Se você está no Ubuntu, ou outra distribuição que use o <code>apt-get</code>, o comando para atualizar o node é o mesmo da comando da instalação: <code>sudo apt-get install nodejs</code>.</p>
+            <p>Se você está no Ubuntu, ou outra distribuição que use o <code>apt-get</code>, o comando para atualizar o Node.js é o mesmo da comando da instalação: <code>sudo apt-get install nodejs</code>.</p>
 
             <p>Você <strong>não</strong> precisa de reiniciar o servidor ou o Ghost.</p>
 
