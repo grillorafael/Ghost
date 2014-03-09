@@ -19,11 +19,11 @@ next_section: deploy
 
             <h1 id="install-linux">Instalando no Linux</h1>
 
-            <h3>Instalar o Node</h3>
+            <h3>Instalar o Node.js</h3>
 
             <ul>
                 <li>Você pode baixar o arquivo <code>.tar.gz</code> do site <a href="http://nodejs.org">http://nodejs.org</a>, ou seguir as instruções para <a href="https://github.com/joyent/node/wiki/Installing-Node.js-via-package-manager">instalar pelo gerenciador de pacotes</a> também.</li>
-                <li>Confira se você tem o Node e o npm instalados digitando <code>node -v</code> e <code>npm -v</code> na janela do seu terminal</li>
+                <li>Confira se você tem o Node.js e o npm instalados digitando <code>node -v</code> e <code>npm -v</code> na janela do seu terminal</li>
             </ul>
 
             <h3>Instalar e Rodar o Ghost</h3>
@@ -31,11 +31,11 @@ next_section: deploy
             <ul>
                 <li>Entre com sua conta no <a href="http://ghost.org">http://ghost.org</a>, e clique no botão azul 'Download Ghost Source Code'</li>
                 <li>Na página de downloads, pressione o botão para baixar a última versão em um arquivo .zip & então extraia para o local que você quer rodar o Ghost.</li>
-                <li>Numa janela de terminal, mude para a pasta raiz que você extraiu o Ghost</li>
+                <li>Numa janela de terminal, mude para a pasta que você extraiu o Ghost</li>
                 <li>No terminal digite <code>npm install --production</code> <span class="note">note que são dois traços</span></li>
                 <li>Quando o npm terminar a instalação, digite <code>npm start</code> para iniciar o Ghost no modo de desenvolvimento</li>
-                <li>Em um navegador, navegue para <code class="path">127.0.0.1:2368</code> para ver sua nova instalação do Ghost</li>
-                <li>Mude o endereço url para <code class="path">127.0.0.1:2368/ghost</code> e crie sua conta de administrador para poder ter acesso a área de administração do Ghost</li>
+                <li>Em um navegador, abra o endereço <code class="path">127.0.0.1:2368</code> para ver sua nova instalação do Ghost</li>
+                <li>Mude o endereço para <code class="path">127.0.0.1:2368/ghost</code> e crie sua conta de administrador para poder ter acesso a área de administração do Ghost</li>
             </ul>
 
             <p>Se você está utilizando o linux como um sistema virtual ou via SSH e só tem o acesso ao terminal, então:</p>
